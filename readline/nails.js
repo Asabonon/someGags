@@ -42,6 +42,7 @@ rl.on("line", function (line) {
       dist = coords[1] - coords[0] + (coords[2] - coords[1]);
     } else {
       for (let i = 2; i < coords.length - 2; i++) {
+        // dist += Math.min(coords[i] - coords[i - 1], coords[i + 1] - coords[i])
         if (coords[i] - coords[i - 1] < coords[i + 1] - coords[i]) {
           dist += coords[i] - coords[i - 1];
         } else {
